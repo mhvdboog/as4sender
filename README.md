@@ -2,7 +2,7 @@
 The [Digital Business Council](http://digitalbusinesscouncil.com.au) (DBC) in Australia has published a specification for a payload agnostic messaging standard. This repository provides a very limited AS4 client script to test connectivity with an access point. An AS4 conformant access point can be configured to support the DBC standard. This script may help test connectivity and configuration of an access point.
 
 ## Usage
-The AS4 header provided in this repository is conformant the Digital Business Council specification except for one difference. This AS4 header templates adds the originalSender and finalRecipient message properties to indicate corner 1 and corner 4 party id's. Some existing AS4 implementations require the To/PartyId and From/PartyId to be the corners 3 and 4.
+The AS4 header provided in this repository is conformant the Digital Business Council specification except for one difference. This AS4 header template adds the originalSender and finalRecipient message properties to indicate corner 1 and corner 4 party id's. Some existing AS4 implementations require the To/PartyId and From/PartyId to be the corners 3 and 4.
 
 Examples:
 ```bash
