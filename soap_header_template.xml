@@ -1,0 +1,40 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/">
+  <soap:Header>
+    <eb:Messaging soap:mustUnderstand="true">
+      <eb:UserMessage>
+        <eb:MessageInfo>
+          <eb:Timestamp></eb:Timestamp>
+          <eb:MessageId></eb:MessageId>
+        </eb:MessageInfo>
+        <eb:PartyInfo>
+          <eb:From>
+            <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:0151">sender-access-point-abn</eb:PartyId>
+            <eb:Role>http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/defaultRole</eb:Role>
+          </eb:From>
+          <eb:To>
+            <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:0151">receiver-access-point-abn</eb:PartyId>
+            <eb:Role>http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/defaultRole</eb:Role>
+          </eb:To>
+        </eb:PartyInfo>
+        <eb:CollaborationInfo>
+          <eb:Service>dbc-procid::urn:resources.digitalbusinesscouncil.com.au:dbc:einvoicing:ver1.0</eb:Service>
+          <eb:Action>dbc-docid::urn:resources.digitalbusinesscouncil.com.au:dbc:invoicing:documents:core-invoice:xsd::core-invoice-1##urn:resources.digitalbusinesscouncil.com.au:dbc:einvoicing:process:einvoicing01:ver1.0</eb:Action>
+          <eb:ConversationId></eb:ConversationId>
+        </eb:CollaborationInfo>
+        <eb:MessageProperties>
+          <eb:Property name="originalSender" type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:0151">supplier-abn</eb:Property>
+          <eb:Property name="finalRecipient" type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:0151">buyer-abn</eb:Property>
+        </eb:MessageProperties>
+        <eb:PayloadInfo>
+          <eb:PartInfo href="cid:invoice">
+            <eb:PartProperties>
+              <eb:Property name="MimeType">application/xml</eb:Property>
+            </eb:PartProperties>
+          </eb:PartInfo>
+        </eb:PayloadInfo>
+      </eb:UserMessage>
+    </eb:Messaging>
+  </soap:Header>
+  <soap:Body/>
+</soap:Envelope>
+
